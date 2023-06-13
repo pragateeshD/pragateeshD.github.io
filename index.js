@@ -43,3 +43,10 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+function adjustLayout() {
+  // Get the height of the image
+  var imageHeight = document.getElementById('Profile').offsetHeight;
+
+  // Set the top margin of the header__text-box to be equal to the image height
+  document.getElementsByClassName('header__text-box')[0].style.marginTop = imageHeight + 'px';
+}

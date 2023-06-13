@@ -320,6 +320,9 @@ body:not(.user-is-tabbing) a:focus {
     visibility: hidden;
     transition: all .4s;
 }
+.header__text-box {
+    transition: margin-top 0.5s ease;
+  }
 
 .back-to-top__image {
     height: 70%;
@@ -414,6 +417,8 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Header ----- */
 /* --------------------------------------- */
 
+
+
 .header {
     background-color: #5b6467;
     background-image: linear-gradient(180deg,#767676 30%,#6d6c6c 50%,#545454 70%,#3a3a3a 80%,#000000 90%), 
@@ -428,7 +433,7 @@ body:not(.user-is-tabbing) a:focus {
 .header__text {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(10%);
 }
 
 .header__text p {
@@ -447,6 +452,26 @@ body:not(.user-is-tabbing) a:focus {
         transform: scale(.8);
     }
 }
+@media (max-width: 500px) {
+    .header {
+      text-align: center;
+      height: auto; /* Adjust the height as needed */
+    }
+    
+    .header__text {
+      position: static;
+      transform: none;
+      margin-top: 0px; /* Adjust the margin-top as needed */
+    }
+    
+    .header__text p {
+      transform: none;
+      font-size: 14px; /* Adjust the font-size as needed */
+      margin: 1rem 0 2rem; /* Adjust the margins as needed */
+      max-width: 100%; /* Remove the variable and set the max-width to 100% */
+    }
+  }
+  
 
 /* --------------------------------------- */
 /* ----- Work ----- */
