@@ -212,6 +212,13 @@ body:not(.user-is-tabbing) a:focus {
 .link:hover {
     color: var(--pink);
 }
+/* --------------------------------------- */
+/* ----- Buttons and Links ----- */
+/* --------------------------------------- */
+
+/* --------------------------------------- */
+/* ----- Buttons and Links ----- */
+/* --------------------------------------- */
 
 .btn {
     position: relative;
@@ -221,6 +228,8 @@ body:not(.user-is-tabbing) a:focus {
     color: inherit;
     border: 1px solid  var(--pink);
     font-weight: 400;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
 }
 
 .btn:focus {
@@ -259,6 +268,28 @@ body:not(.user-is-tabbing) a:focus {
 .btn--pink:focus {
     background: transparent;
 }
+
+.btn-container {
+    display: flex;
+    flex-direction: column; /* Align buttons vertically */
+    gap: 3px; /* Add gap between buttons */
+}
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 900px) {
+    .btn,.btn-download {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .btn, .btn-download {
+        width: 100%;
+    }
+}
+
 
 .link__text {
     position: relative;
@@ -443,6 +474,147 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-medium);
 }
 
+/* For large monitors and TVs
+@media (min-width: 1800px) {
+    .header {
+        text-align: center;
+        height: auto;
+    }
+
+    .header__text {
+        position: static;
+        transform: none;
+        margin-top: 0;
+    }
+
+    .header__text p {
+        transform: none;
+        font-size: 3rem;
+        margin: 2rem 0 4rem;
+        max-width: 100%;
+    }
+
+    .header__btn {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+} */
+
+/* For desktop monitors and laptops */
+/* @media (max-width: 1799px) and (min-width: 1025px) {
+    .header {
+        text-align: center;
+        height: auto;
+    }
+
+    .header__text {
+        position: static;
+        transform: none;
+        margin-top: 0;
+    }
+
+    .header__text p {
+        transform: none;
+        font-size: 2.4rem;
+        margin: 1.5rem 0 3rem;
+        max-width: 100%;
+    }
+
+    .header__btn {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 2.5rem;
+    }
+} */
+
+/* For tablets */
+@media (max-width: 1024px) and (min-width: 600px) {
+    .header {
+        text-align: center;
+        height: auto;
+    }
+
+    .header__text {
+        position: static;
+        transform: none;
+        margin-top: 0;
+    }
+
+    .header__text p {
+        transform: none;
+        font-size: 2rem;
+        margin: 1.5rem 0 2.5rem;
+        max-width: 100%;
+    }
+
+    .header__btn {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+}
+
+/* For large mobile phones */
+@media (max-width: 599px) and (min-width: 400px) {
+    .header {
+        text-align: center;
+        height: auto;
+    }
+
+    .header__text {
+        position: static;
+        transform: none;
+        margin-top: 0;
+    }
+
+    .header__text p {
+        transform: none;
+        font-size: 1.6rem;
+        margin: 1rem 0 2rem;
+        max-width: 100%;
+    }
+
+    .header__btn {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 1.5rem;
+    }
+}
+
+/* For small mobile phones */
+@media (max-width: 399px) {
+    .header {
+        text-align: center;
+        height: auto;
+    }
+
+    .header__text {
+        position: static;
+        transform: none;
+        margin-top: 0;
+    }
+
+    .header__text p {
+        transform: none;
+        font-size: 1.4rem;
+        margin: 1rem 0 2rem;
+        max-width: 100%;
+    }
+
+    .header__btn {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 1.5rem;
+    }
+}
+
+/* Original media query for small screens */
 @media(max-width: 500px) {
     .header {
         text-align: center;
@@ -452,25 +624,28 @@ body:not(.user-is-tabbing) a:focus {
         transform: scale(.8);
     }
 }
+
+/* Modified media query for small screens */
 @media (max-width: 500px) {
     .header {
-      text-align: center;
-      height: auto; /* Adjust the height as needed */
+        text-align: center;
+        height: auto;
     }
-    
+
     .header__text {
-      position: static;
-      transform: none;
-      margin-top: 0px; /* Adjust the margin-top as needed */
+        position: static;
+        transform: none;
+        margin-top: 0px;
     }
-    
+
     .header__text p {
-      transform: none;
-      font-size: 14px; /* Adjust the font-size as needed */
-      margin: 1rem 0 2rem; /* Adjust the margins as needed */
-      max-width: 100%; /* Remove the variable and set the max-width to 100% */
+        transform: none;
+        font-size: 14px;
+        margin: 1rem 0 2rem;
+        max-width: 100%;
     }
-  }
+}
+
   
 
 /* --------------------------------------- */
